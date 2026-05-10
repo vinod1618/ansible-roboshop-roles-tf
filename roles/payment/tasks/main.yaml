@@ -1,0 +1,20 @@
+- name: appp setup
+  ansible.builtin.import_role:
+    name: common
+    tasks_from: app-setup.yaml
+
+- name: python setup
+  ansible.builtin.import_role:
+    name: common
+    tasks_from: pythonsetup.yaml
+
+- name: copy the {{ component }} service file
+  ansible.builtin.import_role:
+    name: common
+    tasks_from: systemd-setup.yaml
+
+- name: restart payment
+  ansible.builtin.service:
+    name: payment
+    state: restarted
+    enabled: yes
