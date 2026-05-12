@@ -14,7 +14,7 @@
     name : "{{item}}"
     executable: pip3.9
   loop:
-    - botocre
+    - botocore
     - boto3
 
 - name: setup root password
