@@ -9,3 +9,4 @@ mysql_host: mysql-"{{ env }}".vinoddevops.online
 shipping_host: shipping-"{{ env }}".vinoddevops.online
 rabbitmq_host: rabbitmq-"{{ env }}".vinoddevops.online
 payment_host: payment-"{{ env }}".vinoddevops.online
+app_version: v3
